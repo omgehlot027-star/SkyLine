@@ -70,7 +70,7 @@ async function fetchWeather() {
         cityName.textContent = data.location.name + ", " + data.location.country;
         dateTime.textContent = data.location.localtime;
         
-        temp.textContent = data.current.temp_c;
+        temp.textContent = `${data.current.temp_c}°C`;
         condition.textContent = data.current.condition.text;
         feels.textContent = `Feels like ${data.current.feelslike_c}°C`;
 
@@ -85,6 +85,8 @@ async function fetchWeather() {
 
         sky.textContent = data.current.is_day === 1 ? "Day" : "Night";
         visibility.textContent = `${data.current.vis_km} km`;
+
+        
 
         
 
